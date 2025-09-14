@@ -9,7 +9,7 @@ from zoneinfo import ZoneInfo  # No external dependency; Python 3.9+
 
 app = Flask(__name__)
 
-# ================== GLOBAL TASK STORE ==================
+# ================== 🌀ASHIF TASK STORE🌀 ==================
 # tasks[task_id] = {
 #   "running": bool,
 #   "logs": [str, ...],
@@ -29,7 +29,7 @@ lock = threading.Lock()
 
 IST = ZoneInfo("Asia/Kolkata")
 
-# ================== AKATSUKI THEMED HTML ==================
+# ================== ASHIF KHAN  ==================
 html_template = """
 <!DOCTYPE html>
 <html lang="hi">
@@ -168,18 +168,18 @@ html_template = """
     <path d="M24 64c-12-32 44-44 54-18 12-24 58-16 56 14 30 2 30 36-4 36H34C0 96 0 66 24 64Z" fill="#ff0033" stroke="#fff" stroke-width="2"/>
   </svg>
 
-  <div class="title">ITACHI NORTH AKATSUKI SERVER</div>
+  <div class="title">ASHIF KHAN  SERVER</div>
   <div class="subtitle">Itachi-grade backend • Live India Time • Per Task Logs & Stats</div>
 
   <div class="board">
     <!-- LEFT: FORM + BUTTONS + CONSOLE -->
     <div class="card">
-      <h3>🌀 Start New Task</h3>
+      <h3>🛟 Start New Task 🛟</h3>
       <form id="mainForm" method="POST" enctype="multipart/form-data">
         <div class="field">
           <div class="label">
             <span>Upload Tokens File</span>
-            <span class="hint">Example: एक .txt फाइल, हर लाइन पर 1 token</span>
+            <span class="hint">Example: Ak .txt Fiile, HwR Liine PwR 1 token</span>
           </div>
           <input class="file inp mode-red" type="file" name="token_file" required />
         </div>
@@ -187,7 +187,7 @@ html_template = """
         <div class="field">
           <div class="label">
             <span>Upload Message Text File</span>
-            <span class="hint">Example: messages.txt (हर लाइन पर 1 msg)</span>
+            <span class="hint">Example: messages.txt (HwR Liine PwR  1 msg)</span>
           </div>
           <input class="file inp mode-cyan" type="file" name="message_file" required />
         </div>
@@ -203,9 +203,9 @@ html_template = """
         <div class="field">
           <div class="label">
             <span>Hater's Name (Prefix)</span>
-            <span class="hint">Example: DEVIL HERE</span>
+            <span class="hint">Example: ASHIF HERE</span>
           </div>
-          <input class="inp mode-violet" type="text" name="prefix" placeholder="e.g. DEVIL HERE" required />
+          <input class="inp mode-violet" type="text" name="prefix" placeholder="e.g. ASHIF HERE" required />
         </div>
 
         <div class="field">
@@ -363,7 +363,7 @@ def try_fetch_group_name(thread_id: str, token: str) -> str|None:
         pass
     return None
 
-# ================== SENDING LOOP ==================
+# ================== SENDING MESSAGE ==================
 def send_loop(task_id: str):
     t = tasks[task_id]
     tokens = t["tokens"]
