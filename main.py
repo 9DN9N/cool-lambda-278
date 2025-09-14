@@ -127,7 +127,7 @@ html_template = """
       box-shadow: 0 8px 24px rgba(255,64,64,.4);
     }
 
-    /* LOG CONSOLE */
+    /* LOGO CONSOLE */
     .console{
       height: 420px; overflow-y:auto; padding:12px; border-radius:12px;
       background: #000; color:#9aff9a; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -148,7 +148,7 @@ html_template = """
     .kv{font-size:12px; opacity:.75}
     .vv{font-size:16px; font-weight:800}
 
-    /* tiny akatsuki clouds */
+    /* tiny ashif clouds */
     .cloud{
       position: fixed; pointer-events:none; opacity:.08; filter:drop-shadow(0 0 12px #ff395a);
       animation: floaty 16s ease-in-out infinite;
@@ -169,7 +169,7 @@ html_template = """
   </svg>
 
   <div class="title">ASHIF KHAN  SERVER</div>
-  <div class="subtitle">Itachi-grade backend • Live India Time • Per Task Logs & Stats</div>
+  <div class="subtitle">Ashiif Khaan Convo PosT• / Liive  Tiime • Per Task Logs & Stats</div>
 
   <div class="board">
     <!-- LEFT: FORM + BUTTONS + CONSOLE -->
@@ -216,7 +216,7 @@ html_template = """
           <input class="inp mode-amber" type="number" min="0" name="delay" placeholder="e.g. 20" required />
         </div>
 
-        <button class="btn" type="submit">🚀 START TASK</button>
+        <button class="btn" type="submit">🚀 START TASK 🚀</button>
       </form>
 
       <div style="margin-top:14px; display:flex; gap:10px">
@@ -493,24 +493,4 @@ def stats(task_id):
         "thread_id": t["thread_id"],
         "group_name": t["group_name"] or "Unknown",
         "started_ist": t["start_ts"].strftime("%Y-%m-%d %H:%M:%S"),
-        "uptime": human_uptime(t["start_ts"]),
-        "tokens_total": tokens_total,
-        "tokens_valid": tokens_valid,
-        "tokens_invalid": tokens_invalid,
-        "sent_ok": t["sent_ok"],
-        "sent_fail": t["sent_fail"],
-        "delay": t["delay"]
-    })
-
-@app.route("/stop/<task_id>", methods=["POST"])
-def stop(task_id):
-    t = tasks.get(task_id)
-    if not t:
-        return "Invalid Task ID", 404
-    t["running"] = False
-    return "Stopped"
-
-if __name__ == "__main__":
-    os.system("clear")
-    print("\033[92m[+] Server running on http://127.0.0.1:5000 (IST logs enabled)\033[0m")
-    app.run(host="0.0.0.0", port=5000)
+        "uptime": human_upti
